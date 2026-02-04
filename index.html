@@ -6,14 +6,20 @@
       p {
         text-align: center;
         color: purple;
+        font-size: 32px;
+        opacity: 0;
+        transition: opacity 1s ease-in;
       }
     </style>
   </head>
   <body>
     <p id="timeOut"></p>
+
     <script>
-      setTimeout (() => {
-        document.getElementById("timeOut").innerText = "hello";
+      setTimeout(() => {
+        const el = document.getElementById("timeOut");
+        el.innerText = "hello";
+        el.style.opacity = 1;
       }, 3000);
     </script>
   </body>
